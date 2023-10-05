@@ -1,38 +1,234 @@
+/* Estilos para el contenedor principal */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la lista de productos */
+.product-list {
+  flex: 1;
+  padding: 20px;
+}
+
+.product-list h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.product-list button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Estilos para el carrito de compras */
+.cart {
+  flex: 1;
+  padding: 20px;
+}
+
+.cart h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.cart button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Estilos generales */
+button {
+  cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .product-list,
+  .cart {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.payment-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.payment-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.payment-form form {
   display: flex;
   flex-direction: column;
+}
+
+.payment-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 16px;
+  margin-top: 10px;
+}
+/* styles.css */
+
+/* Estilo para las imágenes de los productos */
+.product img {
+  width: 100px; /* Ancho deseado en píxeles */
+  height: auto; /* Altura automática para mantener la proporción original */
+}
+.home {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.home h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.home p {
+  font-size: 16px;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  display: flex;
+  flex-direction: baseline; /* Disposición en fila */
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+/* Estilos para el contenedor de filtros */
+.filters {
+  flex: 1; /* Ocupa todo el espacio disponible en el eje horizontal */
+  margin-right: 20px; /* Espacio entre los filtros y el contenido principal */
+}
+
+/* Estilos para los filtros */
+label {
+  display: block; /* Cada etiqueta en su propia línea */
+  margin-bottom: 10px; /* Espacio entre etiquetas */
+}
+select {
+  width: 100%; /* Ancho completo del elemento */
+  padding: 5px; /* Espaciado interno */
+}
+/* Estilos para el Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #333;
   color: white;
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilos para el contenedor del icono del carrito */
+.cart-icon-container {
+  margin-left: auto; /* Empuja el icono hacia la derecha */
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos para el icono del carrito */
+.cart-icon {
+  font-size: 24px;
+  color: rgb(195, 65, 65);
+  /* Otros estilos que desees aplicar al icono */
+}
+/* Estilos para centrar el contenido horizontalmente en Home.css */
+.home {
+  text-align: center;
+  padding: 50px;
+}
+
+.home h2 {
+  font-size: 24px;
+}
+
+.home p {
+  font-size: 16px;
+}
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
 }
