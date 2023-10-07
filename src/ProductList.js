@@ -1,7 +1,17 @@
-import React from 'react';
-import './product-grid.css'; 
+import React, { useState } from 'react';
+import './product-grid.css';
 
-function ProductList({ products, addToCart, filters }) {
+
+
+function ProductList({ products, addToCart, filters, handlePriceChange, handleColorChange, handleSizeChange, handleCategoriaChange }) { 
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  
+
+
+  const handlePreview = (product) => {
+    setSelectedProduct(product); // Mostrar el modal con la vista previa del producto
+  };
+ 
   // Filtrar productos en función de los filtros seleccionados
   const filteredProducts = products.filter((product) => {
     const passPriceFilter =
@@ -12,8 +22,9 @@ function ProductList({ products, addToCart, filters }) {
 
     const passColorFilter = filters.color === '' || filters.color === product.color;
     const passSizeFilter = filters.size === '' || filters.size === product.size;
+    const passCategoriaFilter = filters.categoria === '' || filters.categoria === product.categoria;
 
-    return passPriceFilter && passColorFilter && passSizeFilter;
+    return passPriceFilter && passColorFilter && passSizeFilter && passCategoriaFilter;
   });
 
   return (
@@ -26,11 +37,31 @@ function ProductList({ products, addToCart, filters }) {
           <p>Stock: {product.stock}</p>
           <p>Color: {product.color}</p>
           <p>Tamaño: {product.size}</p>
+          <p>Categoría: {product.categoria}</p>
+          
           <button onClick={() => addToCart(product)}>Agregar al carrito</button>
+          <button onClick={() => handlePreview(product)}>Vista Previa</button>
         </div>
       ))}
+
+      {/* Modal para la vista previa del producto */}
+      {selectedProduct && (
+        <div className="product-preview-modal">
+          {/* <div className="product-preview-content"> */}
+          <div className="modal-content">
+            <h2>{selectedProduct.name}</h2>
+            <img src={selectedProduct.image} alt={selectedProduct.name} />
+            <p>Precio: ${selectedProduct.price}</p>
+            {/* Agregar más detalles del producto aquí si es necesario */}
+            <button onClick={() => addToCart(selectedProduct)}>Agregar al carrito</button>
+            {/* <button onClick={handleCloseModal}>Cerrar</button> */}
+            <button onClick={() => setSelectedProduct(null)}>Cerrar</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 export default ProductList;
+

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css';
 
 function Cart({ cartItems, removeFromCart, simulatePayment }) {
     const calculateTotal = () => {
@@ -11,7 +12,7 @@ function Cart({ cartItems, removeFromCart, simulatePayment }) {
     
       return (
         <div className="cart">
-          <h2>Carrito de Compras:</h2>
+          <h2>Detalle de la compra:</h2>
           <ul>
             {cartItems.map((item) => (
               <li key={item.id}>

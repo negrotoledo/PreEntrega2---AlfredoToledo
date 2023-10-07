@@ -1,234 +1,42 @@
-/* Estilos para el contenedor principal */
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 20px;
-}
+/* Estilo para el contenedor principal */
 
+/* Estilo para el encabezado */
 h1 {
-  color: #333;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para la lista de productos */
-.product-list {
-  flex: 1;
-  padding: 20px;
-}
-
-.product-list h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.product-list ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.product-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-  margin-bottom: 10px;
-}
-
-.product-list button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-/* Estilos para el carrito de compras */
-.cart {
-  flex: 1;
-  padding: 20px;
-}
-
-.cart h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.cart ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.cart li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-  margin-bottom: 10px;
-}
-
-.cart button {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-/* Estilos generales */
-button {
-  cursor: pointer;
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .product-list,
-  .cart {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-
-.payment-form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.payment-form h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.payment-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.payment-form button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.error {
-  color: #dc3545;
-  font-size: 16px;
-  margin-top: 10px;
-}
-/* styles.css */
-
-/* Estilo para las imágenes de los productos */
-.product img {
-  width: 100px; /* Ancho deseado en píxeles */
-  height: auto; /* Altura automática para mantener la proporción original */
-}
-.home {
   text-align: center;
-  padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #d1c7c7; /* Color de fondo del encabezado */
+  color: white;
+  padding: 10px;
 }
 
-.home h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
 
-.home p {
-  font-size: 16px;
-}
-
-/* Estilos para el contenedor principal */
-.container {
-  display: flex;
-  flex-direction: baseline; /* Disposición en fila */
-  justify-content: flex-start; /* Alinea los elementos a la izquierda */
-}
-
-/* Estilos para el contenedor de filtros */
+/* Estilo para el contenedor de filtros */
 .filters {
-  flex: 1; /* Ocupa todo el espacio disponible en el eje horizontal */
-  margin-right: 20px; /* Espacio entre los filtros y el contenido principal */
+  flex: 1;
+  background-color: #fff; /* Color de fondo del contenedor de filtros */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(118, 71, 71, 0.2);
+  margin-right: 20px; /* Espacio entre el contenedor de filtros y la cuadrícula de productos */
 }
 
-/* Estilos para los filtros */
+/* Estilo para los elementos de filtro */
 label {
-  display: block; /* Cada etiqueta en su propia línea */
-  margin-bottom: 10px; /* Espacio entre etiquetas */
+  font-weight: bold;
 }
+
 select {
-  width: 100%; /* Ancho completo del elemento */
-  padding: 5px; /* Espaciado interno */
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
-/* Estilos para el Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+
+
+
+.footer {
   background-color: #333;
-  color: white;
-  padding: 1rem;
-}
-
-/* Estilos para el contenedor del icono del carrito */
-.cart-icon-container {
-  margin-left: auto; /* Empuja el icono hacia la derecha */
-  cursor: pointer;
-}
-
-/* Estilos para el icono del carrito */
-.cart-icon {
-  font-size: 24px;
-  color: rgb(195, 65, 65);
-  /* Otros estilos que desees aplicar al icono */
-}
-/* Estilos para centrar el contenido horizontalmente en Home.css */
-.home {
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  padding: 50px;
-}
-
-.home h2 {
-  font-size: 24px;
-}
-
-.home p {
-  font-size: 16px;
-}
-.cart-icon {
-  position: relative;
-  cursor: pointer;
-}
-
-.cart-item-count {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 4px 8px;
 }

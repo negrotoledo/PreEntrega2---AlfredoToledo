@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
+import './Contact.css'; 
 
-function Contact() {
+function ContactForm() {
   
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -65,4 +66,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactForm;

@@ -1,0 +1,37 @@
+/* Estilo para el contenedor principal de ProductDetail */
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Estilo para la imagen del producto */
+  .product-detail img {
+    max-width: 50%;
+    height: 50%;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para los detalles del producto */
+  .product-detail p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el botón "Agregar al carrito" */
+  .product-detail button {
+    background-color: #81e6c7;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el botón "Agregar al carrito" al pasar el mouse sobre él */
+  .product-detail button:hover {
+    background-color: #92b8e0;
+  }
+  

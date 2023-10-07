@@ -1,11 +1,14 @@
-
 import React from 'react';
+import './product-grid.css'; 
 
 function Home() {
   return (
     <div className="home">
-      <h2>Bienvenido a Nuestra Tienda en Línea</h2>
-      <p>Explora nuestra amplia selección de productos y encuentra lo que necesitas.</p>
+      <div className="header">
+        <h1>Bienvenido a Nuestra Tienda en Línea</h1>
+        <p>Explora nuestra amplia selección de productos y encuentra lo que necesitas.</p>
+      </div>
+     
     </div>
   );
 }

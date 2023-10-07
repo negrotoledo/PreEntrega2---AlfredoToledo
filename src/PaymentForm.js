@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import './product-grid.css'; 
 
 function PagoForm({ totalA, PagoRealizado }) {
   const stripe = useStripe();
